@@ -1,9 +1,9 @@
-InConcert&#8482;
-================
+InConcert
+=========
 
 > In concert - with a common plan; "act in concert"
 
-# Goal
+####Goal
 
 To create a web application which allows users to search, view and RSVP for [Meetups](http://www.meetup.com/).
 Using modern web technologies and the [Meetup API](http://www.meetup.com/meetup_api/).
@@ -21,7 +21,7 @@ Using modern web technologies and the [Meetup API](http://www.meetup.com/meetup_
 ## Environment setup
 ####1. Install Grunt and Bower
 
-  $ npm install -g grunt-cli bower
+    $ npm install -g grunt-cli bower
     
 ####2. Install project dependencies
 Run both commands below in the project root directory.
