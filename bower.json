@@ -1,0 +1,12 @@
+{
+  "name": "InConcert",
+  "description": "In concert - with a common plan; \"act in concert\"",
+  "author": "Niels Dequeker & Andrey Somov",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "~1.2.2",
+    "bootstrap": "~3.0.2",
+    "modernizr": "~2.7.0",
+    "jquery": "~2.0.3"
+  }
+}
