@@ -30,4 +30,4 @@ Run both commands below in the project root directory.
     $ bower install
 
 ## Build instructions
-To build the application, run `$ grunt build` inside the project directory. You can find the output in the `dist/` directory.
+To run the application server, run `$ grunt server` inside the project directory.
