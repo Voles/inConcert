@@ -18,8 +18,8 @@ angular.module('ic', ['ngRoute'])
             
             // meetup detail page
             when('/meetups/:meetupId', {
-                templateUrl: 'js/pages/phone-detail.html',
-                controller: 'MeetupDetail'
+                templateUrl: 'js/pages/meetup-detail/meetup-detail.html',
+                controller: 'MeetupDetailCtrl'
             }).
             
             // default page
