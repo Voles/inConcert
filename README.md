@@ -21,7 +21,7 @@ Using modern web technologies and the [Meetup API](http://www.meetup.com/meetup_
 ## Environment setup
 ####1. Install Grunt and Bower
 
-    $ npm install -g grunt-cli bower
+    $ sudo npm install -g grunt-cli bower
     
 ####2. Install project dependencies
 Run both commands below in the project root directory.
