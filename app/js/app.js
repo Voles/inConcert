@@ -1,6 +1,6 @@
 /**
 * 'ic' is here set as the namespace of the application.
-* The empty array means there are no dependencies for this module.
+* ngRoute manages the url state and is a dependency for the ic module
 */
 angular.module('ic', ['ngRoute'])
 
