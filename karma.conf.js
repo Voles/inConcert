@@ -18,6 +18,7 @@ module.exports = function (config) {
             cfg.bowerComponents + '/jquery/jquery.js',
             cfg.bowerComponents + '/jasmine-jquery/lib/jasmine-jquery.js',
             cfg.bowerComponents + '/angular/angular.js',
+            cfg.bowerComponents + '/angular-mocks/angular-mocks.js',
 
             'app/js/**/*.js'
         ],

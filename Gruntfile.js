@@ -55,16 +55,40 @@ module.exports = function(grunt) {
         server: {
             path: 'http://localhost:<%= connect.options.port %>'
         }
-    }
+    },
+
+      // testing with karma
+      karma: {
+          options: {
+              configFile: 'karma.conf.js',
+              autoWatch: true
+          },
+
+          single: {
+              singleRun: true
+          },
+
+          continuous: {
+              singleRun: false
+          }
+      }
 
   });
 
-  grunt.registerTask('server', function (target) {
-
+  grunt.registerTask('server', function () {
           grunt.task.run([
               'connect:livereload',
               'open',
               'watch'
           ]);
       });
+
+    // test
+    grunt.registerTask('test', function (target) {
+        if (target !== 'continuous') {
+            return grunt.task.run(['karma:single']);
+        }
+
+        grunt.task.run(['karma:continuous']);
+    });
 };
