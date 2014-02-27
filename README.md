@@ -31,3 +31,5 @@ Run both commands below in the project root directory.
 
 ## Build instructions
 To run the application server, run `$ grunt server` inside the project directory.
+
+To run the tests, run `$ grunt test` inside the project directory.
