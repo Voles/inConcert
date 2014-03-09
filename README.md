@@ -13,6 +13,8 @@ Using modern web technologies and the [Meetup API](http://www.meetup.com/meetup_
 * [Node Package Manager](https://npmjs.org/) (NPM)
 * [Git](http://git-scm.com/)
 
+*Note: [installation instructions for NodeJS on Ubuntu](http://stackoverflow.com/questions/16302436/install-nodejs-on-ubuntu-12-10/16303380#16303380)*
+
 ####Dependencies
 
 * [Grunt](http://gruntjs.com/)
@@ -26,7 +28,7 @@ Using modern web technologies and the [Meetup API](http://www.meetup.com/meetup_
 ####2. Install project dependencies
 Run both commands below in the project root directory.
 
-    $ npm install
+    $ sudo npm install
     $ bower install
 
 ## Build instructions
