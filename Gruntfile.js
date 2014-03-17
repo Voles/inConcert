@@ -23,10 +23,10 @@ module.exports = function(grunt) {
                 livereload: LIVERELOAD_PORT
             },
             files: [
-            	  'app/favicon.ico',
-                'app/*/**.html',
+            	'app/favicon.ico',
+                'app/**/*.html',
                 'app/css/{,*/}*.css',
-                'app/js/{,*/}*.js',
+                'app/js/**/*.js',
                 'app/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
             ]
         }
