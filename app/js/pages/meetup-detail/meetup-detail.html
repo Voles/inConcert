@@ -1,13 +1,13 @@
 <div>
 
-	<h2>Meetup title</h2>
-	<p>
-		Meetup description.
-	</p>
+    <div class="alert alert-info" ng-show="feedback">{{ feedback }}</div>
+
+	<h2>{{ meetup.name }}</h2>
+    <div ng-bind-html="meetup.description"></div>
 
 	<h3>RSVP status</h3>
 	<p>
-		<span class="label label-success">32 YEP</span> <span class="label label-danger">2 NOP</span>
+		<span class="label label-success">{{ meetup.yes_rsvp_count }} YEP</span> <span class="label label-danger">{{ meetup.maybe_rsvp_count }} MAYBE</span>
 	</p>
 
 	<h3>Rating</h3>
