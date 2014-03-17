@@ -10,6 +10,6 @@
 
 	<h2 class="lead">Meetups that match '{{ keyword }}'</h2>
 	<div class="list-group">
-	  <a href="#" class="list-group-item" ng-repeat="meetup in meetups | filter:keyword">{{ meetup.name }}</a>
+	  <a class="list-group-item" ng-repeat="meetup in meetups | filter:keyword" ng-click="showMeetup(meetup.id)">{{ meetup.name }}</a>
 	</div>
 </div>
