@@ -26,12 +26,13 @@ Using modern web technologies and the [Meetup API](http://www.meetup.com/meetup_
     $ sudo npm install -g grunt-cli bower
     
 ####2. Install project dependencies
-Run both commands below in the project root directory.
+Run the commands below in the project root directory.
 
     $ sudo npm install
+    $ sudo ./node_modules/protractor/bin/webdriver-manager update
     $ bower install
 
 ## Build instructions
 To run the application server, run `$ grunt server` inside the project directory.
 
-To run the tests, run `$ grunt test` inside the project directory.
+To run the tests (both unit- and E2E tests), run `$ grunt test` inside the project directory.
