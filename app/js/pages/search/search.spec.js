@@ -4,24 +4,26 @@ describe('the Search controller', function () {
 
     beforeEach(module('ic'));
 
-    beforeEach(inject(function (_$controller_, _$rootScope_, _$httpBackend_, _$location_) {
+    beforeEach(inject(function (_$controller_, _$rootScope_, _$httpBackend_, _$location_, _APIConfig_) {
         $controller = _$controller_;
         $scope = _$rootScope_.$new();
         $httpBackend = _$httpBackend_;
         $location = _$location_;
+        APIConfig = _APIConfig_;
+        APIConfig.prefix = '';
         searchCtrl = $controller('SearchCtrl', { $scope: $scope });
     }));
 
     beforeEach(function () {
         var meetupList = [{id: 1}, {id: 2}];
 
-        $httpBackend.whenGET('http://192.168.0.15:8080/search/akka').respond(function () {
+        $httpBackend.whenGET('/search/akka').respond(function () {
             return [200, {results: meetupList}];
         });
     });
 
-    it('should fetch \'akka\' meetups on initializing', function () {
-        $httpBackend.expectGET('http://192.168.0.15:8080/search/akka');
+    it('should fetch \'akka\' meetups on initialization', function () {
+        $httpBackend.expectGET('/search/akka');
         $httpBackend.flush();
 
         expect($scope.meetups).toBeDefined();

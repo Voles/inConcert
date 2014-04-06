@@ -1,7 +1,7 @@
 angular.module('ic')
 
-	.controller('SearchCtrl', ['$scope', '$http', '$log', '$location', function ($scope, $http, $log, $location) {
-		$http.get('http://192.168.0.15:8080/search/akka')
+	.controller('SearchCtrl', ['$scope', '$http', '$log', '$location', 'APIConfig', function ($scope, $http, $log, $location, APIConfig) {
+		$http.get(APIConfig.prefix + '/search/akka')
 			.success(function (response) {
 				$scope.meetups = response.results;
 			})

@@ -5,9 +5,25 @@
 angular.module('ic', ['ngRoute', 'ngSanitize'])
 
     /**
+     * API provider
+     */
+    .provider('APIConfig', function () {
+        var that = this;
+        this.prefix = '';
+
+        this.$get = function () {
+            return {
+                prefix: that.prefix
+            };
+        };
+    })
+
+    /**
     * Configuration
     */
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider', 'APIConfigProvider', function ($routeProvider, APIConfigProvider) {
+        APIConfigProvider.prefix = 'http://192.168.0.15:8080';
+
         $routeProvider.
 
             // main page is the search form
@@ -27,6 +43,8 @@ angular.module('ic', ['ngRoute', 'ngSanitize'])
                 redirectTo: '/search'
             });
     }])
+
+
 
     /**
     * Run
