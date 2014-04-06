@@ -31,6 +31,4 @@ angular.module('ic', ['ngRoute', 'ngSanitize'])
     /**
     * Run
     */
-    .run([function () {
-        console.log('The application is running!');
-    }]);
+    .run([function () { }]);
