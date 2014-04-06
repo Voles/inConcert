@@ -22,7 +22,13 @@ module.exports = function (config) {
             cfg.bowerComponents + '/angular-mocks/angular-mocks.js',
             cfg.bowerComponents + '/angular-sanitize/angular-sanitize.js',
 
+            'app/js/app.js',
             'app/js/**/*.js'
+        ],
+
+        // files to exclude
+        exclude: [
+            'app/**/e2e/*.js'
         ],
 
         // generate js files from html templates to expose them during testing
@@ -36,9 +42,6 @@ module.exports = function (config) {
             // from all the files, so you can load them all with module('foo')
             //moduleName: 'hippo.templates'
         },
-
-        // files to exclude
-        exclude: [],
 
         // level of logging
         // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG

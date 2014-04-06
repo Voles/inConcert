@@ -71,8 +71,16 @@ module.exports = function(grunt) {
           continuous: {
               singleRun: false
           }
-      }
+      },
 
+      // protractor
+      protractor: {
+          continuous: {
+              keepAlive: true, // If false, the grunt process stops when the test fails.
+              noColor: false, // If true, protractor will not use colors in its output.
+              configFile: "protractor.conf.js" // Target-specific config file
+          }
+      }
   });
 
   grunt.registerTask('server', function () {
@@ -86,7 +94,7 @@ module.exports = function(grunt) {
     // test
     grunt.registerTask('test', function (target) {
         if (target !== 'continuous') {
-            return grunt.task.run(['karma:single']);
+            return grunt.task.run(['karma:single', 'connect:livereload', 'protractor:continuous']);
         }
 
         grunt.task.run(['karma:continuous']);
