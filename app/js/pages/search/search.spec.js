@@ -17,13 +17,14 @@ describe('the Search controller', function () {
     beforeEach(function () {
         var meetupList = [{id: 1}, {id: 2}];
 
-        $httpBackend.whenGET('/search/akka').respond(function () {
+        $httpBackend.whenGET('/search/test').respond(function () {
             return [200, {results: meetupList}];
         });
     });
 
-    it('should fetch \'akka\' meetups on initialization', function () {
-        $httpBackend.expectGET('/search/akka');
+    it('should hold a list with meetups after performing a search', function () {
+        $httpBackend.expectGET('/search/test');
+        $scope.search('test');
         $httpBackend.flush();
 
         expect($scope.meetups).toBeDefined();
@@ -35,8 +36,6 @@ describe('the Search controller', function () {
     });
 
     it('should navigate to the the detail page of a meetup', function () {
-        $httpBackend.flush();
-
         $scope.showMeetup(1);
         expect($location.path()).toBe('/meetups/1');
     });
