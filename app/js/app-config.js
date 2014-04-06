@@ -7,7 +7,7 @@ angular.module('ic')
     * Config
     */
     .config(['$routeProvider', 'APIConfigProvider', function ($routeProvider, APIConfigProvider) {
-        APIConfigProvider.prefix = 'http://192.168.0.15:8080';
+        APIConfigProvider.prefix = 'http://localhost:5000';
 
         $routeProvider.
 
