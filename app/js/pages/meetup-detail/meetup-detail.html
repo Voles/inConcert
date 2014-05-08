@@ -20,9 +20,5 @@
 	</p>
 
 	<h3>Pictures of beer and pizza</h3>
-	<img src="http://dummyimage.com/100x75/39b3d7/fff" alt="Pepperoni pizza" class="img-thumbnail">
-	<img src="http://dummyimage.com/100x75/39b3d7/fff" alt="Pepperoni pizza" class="img-thumbnail">
-	<img src="http://dummyimage.com/100x75/39b3d7/fff" alt="Pepperoni pizza" class="img-thumbnail">
-	<img src="http://dummyimage.com/100x75/39b3d7/fff" alt="Pepperoni pizza" class="img-thumbnail">
-	<img src="http://dummyimage.com/100x75/39b3d7/fff" alt="Pepperoni pizza" class="img-thumbnail">
+	<img ng-repeat="picture in meetup.photos" ng-src="{{picture.thumb_link}}" class="img-thumbnail">
 </div>
