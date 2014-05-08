@@ -1,5 +1,6 @@
 angular.module('ic')
 
+  // kudos to http://stackoverflow.com/a/11878038/363448
   .filter('range', function() {
     return function(input, total) {
       total = parseInt(total);
