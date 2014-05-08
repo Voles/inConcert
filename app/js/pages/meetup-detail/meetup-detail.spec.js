@@ -27,6 +27,7 @@ describe('the Meetup Detail controller', function () {
         $httpBackend.expectGET('/meetups/1');
         $httpBackend.flush();
 
+
         expect($scope.meetup).toEqual(jasmine.any(Object));
         expect($scope.meetup.id).toEqual(1);
     });

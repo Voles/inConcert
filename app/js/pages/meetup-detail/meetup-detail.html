@@ -7,7 +7,7 @@
 
 	<h3>RSVP status</h3>
 	<p>
-		<span class="label label-success">{{ meetup.yes_rsvp_count }} YEP</span> <span class="label label-danger">{{ meetup.maybe_rsvp_count }} MAYBE</span>
+		<span class="label label-success">{{ meetup.yes_rsvp_count }} YEP</span>
 	</p>
 
 	<h3 ng-show="meetup.rating">Rating</h3>
@@ -19,6 +19,8 @@
                 }"></span>
 	</p>
 
-	<h3>Pictures of beer and pizza</h3>
-	<img ng-repeat="picture in meetup.photos" ng-src="{{picture.thumb_link}}" class="img-thumbnail">
+	<h3 ng-show="meetup.photos">Pictures of beer and pizza</h3>
+    <a ng-href="{{photo.photo_link}}" ng-repeat="photo in meetup.photos">
+        <img ng-src="{{photo.thumb_link}}" class="img-thumbnail">
+    </a>
 </div>
