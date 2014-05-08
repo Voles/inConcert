@@ -5,3 +5,9 @@
   max-width: 680px;
   padding: 0 15px;
 }
+
+.meetup-detail img {
+    width: 120px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
