@@ -7,7 +7,7 @@ angular.module('ic')
     * Config
     */
     .config(['$routeProvider', 'APIConfigProvider', function ($routeProvider, APIConfigProvider) {
-        APIConfigProvider.prefix = 'http://morning-oasis-8223.herokuapp.com/';
+        APIConfigProvider.prefix = 'http://morning-oasis-8223.herokuapp.com';
 
         $routeProvider.
 
